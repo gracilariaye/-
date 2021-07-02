@@ -1,0 +1,6 @@
+<view>
+ <view>
+   <view  wx:for="{{showText[currentIndex].text}}"  wx:if="{{markIndex==currentIndex}}" style="transition" wx:key="index" class="textInfo"  style="animation-delay:{{index*2.5}}s">{{item}}</view>
+ </view>
+</view>
+

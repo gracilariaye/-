@@ -1,0 +1,40 @@
+<view>
+  <view class="out">
+    <view class="back" catchtap="toBack"><image src="../assist/images/return.png"></image></view>
+    <view class="header">
+    <view class="bg_img">
+      <open-data type="userAvatarUrl"></open-data>
+      <view class="cover"></view>
+    </view>
+    <view class="user_info">
+      <view class="pic_box">
+        <view class="pic">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+  <view class="about_collect">
+    <text class="tx_ft">Collection</text>
+    <view class="about_text">
+      <!-- <text class="tx">投稿</text> -->
+      <button plain="true" class="tx" open-type='contact'>投稿</button>
+      <button plain="true" class="tx" open-type='contact'>反馈</button>
+      <button plain="true" class="tx">关于</button>
+    </view>
+  </view>
+  <view class="collect_list">
+  <view wx:for="{{collectList}}"  class="colllect_item" data-currentIndex="{{index}}" catchtap="toindex">
+    <view class="bg" style="background-image:url('{{item.imageUrl}}')">
+    </view>
+    <view class="text">
+      <text wx:for="{{item.text}}" wx:for-item="item1" class="tx">
+        {{item1}}
+      </text>
+    </view>
+  </view>
+  </view>  
+  </view>
+
+</view>

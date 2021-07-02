@@ -1,0 +1,11 @@
+<view>
+  <view class="out">
+    <view class="ft">
+      <image src="../../assist/images/note.png" wx:for="{{5}}"  wx:for-index="index" style="animation-delay:{{index}}s"></image>
+    </view>
+    <view class="tw"  bindtap="listenerButtonPause">
+      <image  src="../../assist/images/circle.png"></image>
+      <view>{{musicInfo.list.musicName}}</view>
+    </view>
+  </view>
+</view>

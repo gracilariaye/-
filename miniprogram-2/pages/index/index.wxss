@@ -1,0 +1,100 @@
+/* pages/index/index.wxss */
+.start{
+  width: 100vw;
+  height: 100vh;
+  background-image:url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01950659471ae7a8012193a37a6ed0.gif&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625680068&t=719263210e04cac36a638487f579c7e4");
+  background-size: 100% 100%;
+  z-index: 11111111111;
+  position: relative;
+}
+.back{
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 10000;
+}
+.back image{
+  width: 100%;
+  height: 100%;
+}
+.assideBtn{
+  width: 50px;
+}
+.main{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -11;
+}
+.textEffect{
+  position: absolute;
+  top: 200rpx;
+}
+.musicEffect{
+  position: absolute;
+  bottom: 140rpx;
+}
+.textEffect,.musicEffect{
+  color: #fff;
+  font-weight: bolder;
+}
+
+
+.page-section,.page-section-spacing {
+  height: 100%;
+  width: 100%;
+}
+
+.imgBox{
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image{
+  background-size: 100% 100% ;
+  width:100%;
+  height:100vh;
+}
+.content{
+  padding: 0 20px;
+}
+
+.startBg{
+  position: absolute;
+  z-index: 1;
+  /* backdrop-filter: hue-rotate(180deg); */
+  filter: blur(6px);
+}
+.endBg{
+  animation:changeBg 2s linear;
+}
+@keyframes changeBg{
+  0%{
+    backdrop-filter: hue-rotate(180deg);
+    filter: blur(6px);
+  }
+  100%{
+    backdrop-filter: hue-rotate(0deg);
+    filter: blur(0px);
+  }
+}
+.ready_cont{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: bolder;
+  position: absolute;
+  top: 300rpx;
+  z-index: 1111111;
+}
+.ready_cont .startBtn{
+  width: 150px;
+  height: 150px;
+}
+.ready_cont text{
+  margin-top: 120rpx;
+}

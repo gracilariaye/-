@@ -1,0 +1,28 @@
+/* pages/components/textEffect/index.wxss */
+.textInfo {
+  margin-top:  50rpx;
+  transition: all 1s ease;
+  animation: optList 4s linear forwards;
+  opacity: 0;
+}
+
+.showText {
+  margin-top: 50rpx;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+
+@keyframes optList {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

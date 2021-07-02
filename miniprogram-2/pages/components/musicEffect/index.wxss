@@ -1,0 +1,83 @@
+.ft {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+}
+
+.ft image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: myfirst 3s linear infinite;
+  opacity: 0;
+
+}
+.tw view{
+  white-space: nowrap;
+  position: relative;
+  top: -48.5rpx;
+  left: 62rpx;
+}
+
+.tw image {
+  width: 45rpx;
+  height: 45rpx;
+  animation: fitst 2s linear infinite;
+
+}
+
+@keyframes myfirst{
+  0% {
+    left: 0px;
+    top: -0px;
+    opacity: 0;
+  }
+
+  25% {
+    left: 20px;
+    top: -20px;
+    opacity: 0.5;
+  }
+
+  50% {
+    left: 0px;
+    top: -40px;
+    opacity: 1;
+  }
+
+  75% {
+    left: -10px;
+    top: -60px;
+    opacity: 0.5;
+  }
+
+  100% {
+    left: 0px;
+    top: -80px;
+    opacity: 0;
+  }
+}
+
+@keyframes fitst {
+  0% {
+   transform: rotate(0deg);  
+  }
+
+  50% {
+    transform: rotate(180deg);  
+
+  }
+
+  100% {
+    transform: rotate(360deg);  
+
+  }
+}
+
+
+
+.out {
+  bottom: 0;
+  position: absolute;
+
+}

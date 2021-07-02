@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "textEffect":"../components/textEffect/index",
+    "musicEffect":"../components/musicEffect/index",
+    "assideBtn":"../components/assideBtn/index"
+  }
+}

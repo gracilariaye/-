@@ -1,0 +1,16 @@
+<view>
+  <view class="asside">
+    <view class="pic_box" catchtap="toCollection">
+      <view class="pic" >
+        <open-data type="userAvatarUrl" ></open-data>
+      </view>
+    </view>
+    <view class="btn" catchtap="changeLove">
+      <image wx:if="{{!loveStatus}}" src="../../assist/images/love1.png"></image>
+      <image  wx:if="{{loveStatus}}" src="../../assist/images/love3.png"></image>
+    </view>
+    <button plain class="btn img-button" open-type="share">
+      <image src="../../assist/images/share11.png"></image>
+    </button>
+  </view>
+</view>

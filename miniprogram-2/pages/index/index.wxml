@@ -1,0 +1,28 @@
+<!--pages/index/index.wxml-->
+<view>
+  <view class="start" wx:if="{{showPage}}"/>
+  <view class="ready_cont" wx:if="{{!readyStatus}}">
+      <image class="startBtn" bindtap="startFn1" src="../assist/images/bofang.png"></image>
+      <text>点击开始</text>
+      <text>{{'<<----点击下方暂停音乐---->>'}}</text>
+    </view>  
+  <view class="main" >
+  <view wx:if="{{backStatus}}" class="back" catchtap="toBack"><image src="../assist/images/return.png"></image></view>
+      <view class="page-section swiper">
+        <swiper current="{{currentIndex}}" class=" page-section-spacing"  bindchange="changeBgImg">
+          <block wx:for="{{proList}}" wx:key="key">
+            <swiper-item >
+              <view class="imgBox">
+                <view class="slide-image slide-image  {{readyStatus?'endBg':'startBg'}}" style="background-image:url('{{item.imageUrl}}')"></view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  <view class="content" wx:if="{{readyStatus}}">
+    <textEffect currentIndex="{{currentIndex}}" class="textEffect" proList="{{proList}}"></textEffect>
+    <musicEffect bindchangeMusic="changeMusic" musicInfo="{{musicInfo}}" class="musicEffect"></musicEffect>
+    <assideBtn bindcollectionFn="collectionFn" collectList="{{collectList}}" currentIndex="{{currentIndex}}" proList="{{proList}}" class="assideBtn"></assideBtn>
+  </view>
+</view>
